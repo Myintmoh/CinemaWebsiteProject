@@ -31,5 +31,6 @@
 		</div>
 		<div class="clear"></div>		
 	</div>
-    <?php //include('footer.php');?>
+    <div style="margin-top: -200px;"></div>
+    <?php include('footer.php');?>
 </div>

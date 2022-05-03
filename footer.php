@@ -21,7 +21,6 @@
             </h6>
             <p align="justify">
               JCGV is one of Myanmar's leading multiplex cinema exihibitors. JCGV brand started offering services since 2009 at the capital city of Myanmar, Naypyitaw.
-              Its expansion to Yangon has brought success in the entertainment industry fulfilling its goal to provide unique cinema experience.
             </p>
           </div>
 
