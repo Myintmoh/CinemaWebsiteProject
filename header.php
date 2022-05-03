@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include 'connection.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,12 +23,16 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: white;
+  background-color: #0AA1DD;
+  top:0;
+  position:fixed;
+  z-index: 999;
+  width: 100%;
 }
 
 .topnav a {
   float: left;
-  color: black;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -44,18 +49,18 @@ body {
   background-color: #0AA1DD;
   color: white;
 }
+
 </style>
 </head>
 <body>
-
 <div class="topnav">
   <a href="homepage.php">HOME</a>
-  <a href="#news">SHOWING</a>
-  <a href="#contact">UPCOMING</a>
-  <a href="#about">CONTACT</a>
-  <a href="#about">ABOUT</a>
+  <a href="showing.php">SHOWING</a>
+  <a href="upcoming.php">UPCOMING</a>
+  <a href="contact.php">CONTACT</a>
+  <a href="about.php">ABOUT</a>
 
-  <!-- <?php 
+  <?php 
     if(isset($_SESSION['user'])) {
         $us=mysqli_query($con, "select * from user_tbl where user_id='".$_SESSION['user']."'");
         $user=mysqli_fetch_array($us);?>
@@ -72,7 +77,9 @@ body {
                 </div>
                 <?php
             }
-        ?> -->
+        ?>
 </div>
+
+
 </body>
 </html>

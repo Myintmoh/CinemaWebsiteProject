@@ -2,14 +2,14 @@
     include "header.php";
     include "connection.php";
 ?>
-<div class="content">
+<div class="content" style="margin-top: 50px;">>
 	<div class="wrap">
 		<div class="content-top" style="min-height:300px;padding:50px">
 			<div class="col-md-4 col-md-offset-4">
 				<div class="panel panel-default">
 				    <div class="panel-heading">Login</div>
 				    <div class="panel-body">
-				  	    <?php //include('msgbox.php');?>
+				  	    <?php include('msgbox.php');?>
 				        <p class="login-box-msg">Sign in to start your session</p>
 				        <form action="loginprocess.php" method="post">
                             <div class="form-group has-feedback">
@@ -31,6 +31,6 @@
 		</div>
 		<div class="clear"></div>		
 	</div>
-    <div style="margin-top: -200px;"></div>
+    <div style="margin-top: -150px;"></div>
     <?php include('footer.php');?>
 </div>

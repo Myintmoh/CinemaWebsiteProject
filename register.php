@@ -10,7 +10,7 @@
     include('form.php');
     $frm=new formBuilder;      
 ?> 
-<div class="content">
+<div class="content" style="margin-top: 50px;">>
 	<div class="wrap">
 		<div class="content-top" style="min-height:300px;padding:50px">
 			<div class="col-md-4 col-md-offset-4">

@@ -1,5 +1,4 @@
 <?php 
-    include "header.php";
     include "connection.php";
 ?>
 <!DOCTYPE html>
@@ -13,8 +12,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-<div class="container">
+<?php include 'header.php'; ?>
+<div class="container" style="margin-top: 50px;">
   <div id="myCarousel" class="carousel slide" data-ride="carousel" style=" margin-left: -70px; width: 1280px;">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -46,6 +45,35 @@
     </a>
   </div>
 </div>
+
+<div class="main">
+  <h1>Fixed Top Menu</h1>
+  <h2>Scroll this page to see the effect</h2>
+  <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+</div>
+
+
 
 </body>
 </html>

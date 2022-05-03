@@ -9,8 +9,6 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-
-
 <section class="info_section" style="margin-top:300px;">
     <div class="info_container" style="margin-top: -5px;">
       <div class="container">
@@ -60,8 +58,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
   <script src="js/custom.js"></script>
-
-
-
 </body>
 </html>
