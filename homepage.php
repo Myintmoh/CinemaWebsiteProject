@@ -1,5 +1,5 @@
 <?php 
-    include "connection.php";
+    include "connectionpdo.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,11 +10,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
 <?php include 'header.php'; ?>
-<div class="container" style="margin-top: 50px;">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" style=" margin-left: -70px; width: 1280px;">
+<div class="container" style="margin-top: -2px;">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style=" margin-left: -167px; width: 1263px;">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -46,34 +49,81 @@
   </div>
 </div>
 
-<div class="main">
-  <h1>Fixed Top Menu</h1>
-  <h2>Scroll this page to see the effect</h2>
-  <h2>The navigation bar will stay at the top of the page while scrolling</h2>
-
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-</div>
+<!-- now showing -->
 
 
+<section class="why_section bg-1">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          How It Works
+        </h2>
+        <h4>
+          3 Simple steps to book your favorite movie!
+        </h4>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="box ">
+            <div class="img-box">
+            <div class="service-item-icon">
+                    <i class="fas fa-4x fa-user"></i>
+                </div>
+            </div>
+            <div class="detail-box">
+              <h4>
+                1. Register for an account
+              </h4>
+              <p>
+                login or register for an account to make bookings
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box ">
+            <div class="img-box">
+            <div class="service-item-icon">
+                    <i class="fas fa-4x fa-video"></i>
+                </div>
+            </div>
+            <div class="detail-box">
+              <h4>
+                2. Choose your favorite movie
+              </h4>
+              <p>
+                choose the movie you want to watch at our cinema
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box ">
+            <div class="img-box">
+            <div class="service-item-icon">
+                    <i class="fas fa-4x fa-theater-masks"></i>
+                </div>
+            </div>
+            <div class="detail-box">
+              <h4>
+                3. Book & Enjoy the movie
+              </h4>
+              <p>
+                book the seats and make payments and enjoy the movie
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- comming soon -->
+
+  <!-- promotions -->
+
+
+  
 </body>
+<?php include 'footer.php';?>
 </html>

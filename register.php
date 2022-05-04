@@ -1,6 +1,6 @@
 <?php 
     include('header.php');
-    include('connection.php');
+    include('connectionmysqli.php');
 ?>
 <link rel="stylesheet" href="validation/dist/css/bootstrapValidator.css"/>
     
@@ -10,6 +10,7 @@
     include('form.php');
     $frm=new formBuilder;      
 ?> 
+<title>Register Account</title>
 <div class="content" style="margin-top: 50px;">>
 	<div class="wrap">
 		<div class="content-top" style="min-height:300px;padding:50px">
