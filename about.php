@@ -30,7 +30,7 @@
     
     <!-- About JCGV -->
     <div class="ct-pageWrapper" id="ct-js-wrapper">
-        <img src="images/jcgv.png" alt="JCGV" class="center" style="margin-top: 50px; margin-bottom: -150px;">
+        <img src="admin/images/jcgv.png" alt="JCGV" class="center" style="margin-top: 50px; margin-bottom: -150px;">
         <section class="story-section company-sections ct-u-paddingBoth100 paddingBothHalf noTopMobilePadding" id="section" style="margin-bottom: -150px;">
             <div class="container text-center">
                 <h2>ABOUT JCGV CINEMAS</h2>
@@ -92,51 +92,51 @@
                     <div class="row ct-u-paddingBoth20" style="margin-bottom: 30px;">
                         <div class="col-xs-6 col-md-4">
                             <div class="company-icons-white">
-                                <img src="images/cinema7.jpg" style="border-radius: 50px; height: 200px; width: 300px;">
+                                <img src="admin/images/cinema7.jpg" style="border-radius: 50px; height: 200px; width: 300px;">
                             </div>
                         </div>
                         <div class="col-xs-6 col-md-4">
                             <div class="company-icons-white">
-                                <img src="images/cinema3.jpg" style="border-radius: 50px; height: 200px; width: 300px;">
+                                <img src="admin/images/cinema3.jpg" style="border-radius: 50px; height: 200px; width: 300px;">
                             </div>
                         </div>
                         <div class="col-xs-6 col-md-4">
                             <div class="company-icons-white">
-                                <img src="images/cinema8.jpg" style="border-radius: 50px; height: 200px; width: 300px;">     
+                                <img src="admin/images/cinema8.jpg" style="border-radius: 50px; height: 200px; width: 300px;">     
                             </div>
                         </div>
                     </div>
                     <div class="row ct-u-paddingBoth20" style="margin-bottom: 30px;">
                         <div class="col-xs-6 col-md-4">
                             <div class="company-icons-white">
-                                <img src="images/cinema1.jpg" style="border-radius: 50px; height: 200px; width: 300px;">
+                                <img src="admin/images/cinema1.jpg" style="border-radius: 50px; height: 200px; width: 300px;">
                             </div>
                         </div>
                         <div class="col-xs-6 col-md-4">
                             <div class="company-icons-white">
-                                <img src="images/jcgv.png" alt="JCGV" style="border-radius: 50px; height: 150px; width: 300px; margin-top: 25px;">
+                                <img src="admin/images/jcgv.png" alt="JCGV" style="border-radius: 50px; height: 150px; width: 300px; margin-top: 25px;">
                             </div>
                         </div>
                         <div class="col-xs-6 col-md-4">
                             <div class="company-icons-white">
-                                <img src="images/cinema2.jpg" style="border-radius: 50px; height: 200px; width: 300px;">     
+                                <img src="admin/images/cinema2.jpg" style="border-radius: 50px; height: 200px; width: 300px;">     
                             </div>
                         </div>
                     </div>
                     <div class="row ct-u-paddingBoth20">
                         <div class="col-xs-6 col-md-4">
                             <div class="company-icons-white">
-                                <img src="images/cinema4.jpg" style="border-radius: 50px; height: 200px; width: 300px;">     
+                                <img src="admin/images/cinema4.jpg" style="border-radius: 50px; height: 200px; width: 300px;">     
                             </div>
                         </div>
                         <div class="col-xs-6 col-md-4">
                             <div class="company-icons-white">
-                                <img src="images/cinema9.jpg" style="border-radius: 50px; height: 200px; width: 300px;">     
+                                <img src="admin/images/cinema9.jpg" style="border-radius: 50px; height: 200px; width: 300px;">     
                             </div>
                         </div>
                         <div class="col-xs-6 col-md-4">
                             <div class="company-icons-white">
-                                <img src="images/cinema6.jpg" style="border-radius: 50px; height: 200px; width: 300px;">     
+                                <img src="admin/images/cinema6.jpg" style="border-radius: 50px; height: 200px; width: 300px;">     
                             </div>
                         </div>
                     </div>

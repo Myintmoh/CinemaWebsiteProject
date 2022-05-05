@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'connectionmysqli.php';
+    include 'admin/connectionmysqli.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,10 +61,11 @@
 </head>
 <body>
 <div class="topnav">
-  <a href="homepage.php"><img src="images/jcgv.png" alt="JCGV" width="150px" height="50px" style="margin-top: -5px;"></a>
+  <a href="homepage.php"><img src="admin/images/jcgv.png" alt="JCGV" width="150px" height="50px" style="margin-top: -5px;"></a>
   <a href="homepage.php" class="link">HOME</a>
-  <a href="showing.php" class="link">SHOWING</a>
-  <a href="upcoming.php" class="link">UPCOMING</a>
+  <!-- <a href="showing.php" class="link">SHOWING</a>
+  <a href="upcoming.php" class="link">UPCOMING</a> -->
+  <a href="movies.php" class="link">MOVIES</a>
   <a href="contact.php" class="link">CONTACT</a>
   <a href="about.php" class="link">ABOUT</a>
 

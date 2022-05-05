@@ -1,5 +1,5 @@
 <?php 
-    include 'connectionpdo.php';
+    include 'admin/connectionpdo.php';
     try {
         $sql="INSERT INTO comment_tbl(name, email, phone, comment) VALUES (?,?,?,?)";
         $sq=$db->prepare($sql);

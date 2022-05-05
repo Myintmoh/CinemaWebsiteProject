@@ -1,6 +1,6 @@
 <?php
     include 'header.php';
-    include 'connectionpdo.php';
+    include 'admin/connectionpdo.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
