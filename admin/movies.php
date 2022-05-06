@@ -20,6 +20,10 @@
                 <input type="text" placeholder="Enter Movie Duration" name="duration" required>
                 <label for="link"><b>Trailer Youtube Link</b></label>
                 <input type="text" placeholder="Enter Movie Trailer Link" name="link" required>
+                <label for="status"><b>Status</b></label>
+                <input type="text" placeholder="Enter Status" name="status" required>
+                <label for="date"><b>Release Date</b></label>
+                <input type="date" name="date" required>
                 <label for="photo"><b>Upload Poster</b></label>
                 <input type="file" name="image">
                 <button type="submit" class="signupbtn" name="submit">Add Movies</button>
@@ -53,7 +57,7 @@
 
                 try {
                     include 'connectionpdo.php';
-                    $sql="INSERT INTO showing_tbl(title, poster, description, cast, duration, trailer_link) VALUES(?,?,?,?,?,?)";
+                    $sql="INSERT INTO showing_tbl(title, poster, date, description, cast, duration, trailer_link, status) VALUES(?,?,?,?,?,?,?,?)";
                     $sq= $db->prepare($sql);
                     $title= $_POST['title'];
                     $description= $_POST['description'];
@@ -61,9 +65,11 @@
                     $duration = $_POST['duration'];
                     $link = $_POST['link'];
                     $photo= $filename;
-                    if($sq->execute(array($title, $photo, $description, $cast, $duration, $link))){   
+                    $status=$_POST['status'];
+                    $date=$_POST['date'];
+                    if($sq->execute(array($title, $photo, $date, $description, $cast, $duration, $link, $status))){   
                         echo "<script>
-                                alert('Item added successfully.');
+                                alert('Movie added successfully.');
                                 window.location.href='adminproducts.php';
                                 </script>";
                     }

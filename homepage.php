@@ -14,19 +14,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <style>
-    .watch_but {
-  display: inline-block;
-  background: #db9603;
-  position: relative;
-  border-radius: 2px;
-  font-size: 13px;
-  line-height: 11px;
-  color: #fff;
-  border-bottom: 1px solid #db9603;
-  border-right: 1px solid #db9603;
-  margin: 15px 0 0;
-  padding: 12px 14px 9px 10px;
-}
+    body{
+      overflow-x: hidden;
+    }
   </style>
 </head>
 <body>
@@ -65,7 +55,6 @@
 </div>
 
 <!-- now showing -->
-<!-- display products -->
 <div class="row" style="margin-top: -50px;">
   <?php include 'admin/connectionpdo.php';?>
         <center>
@@ -74,27 +63,20 @@
           </div>
         </center>
           <?php 
-          $sql=$db->prepare("SELECT * FROM showing_tbl");
+          $sql=$db->prepare("SELECT * FROM movie_tbl WHERE status='showing'");
           $sql->execute();
           while($row=$sql->fetch(PDO::FETCH_ASSOC)){
             extract($row);
-
             ?>
-
             <div class="col-sm-4" align="center">
 
-              <form method="post" action="manage_cart.php">
+              <form method="post" action="viewdetails.php">
               <img src="admin/images/<?php echo $poster; ?>" width="200" height="300" style="border-radius: 50px; border: 2px solid black;"><br>
               <h4><?php echo $title; ?></h4>
-              <!-- Description : <?php //echo $description; ?> <br>    
-              Cast : <?php //echo $cast; ?> <br>   
-              Trailer Link: <a href="<?php //echo $trailer_link; ?>" target="_blank">Watch Trailer</a> <br>      
-              <input type="hidden" name="name" value="<?php //echo $productname; ?>">
-              <input type="hidden" name="price" value="<?php //echo $price; ?>"> -->
               <a href="<?php echo $trailer_link; ?>" target="_blank" class="btn btn-info">Watch Trailer</a>
-              <!-- <button type="submit" class="btn btn-info" name="buy">View Details</button> -->
-              <a href="viewdetails.php" class="btn btn-info">View Details</a> <br>
-              <br><br> <bR>
+              <input type="hidden" name="name" value="<?php echo $title;?>">
+              <button class="btn btn-info" name="submit">View Details</button>
+              <br><br> <br>
             </form>
             </div>
           <?php } ?>
@@ -176,14 +158,14 @@
           </div>
         </center>
           <?php 
-          $sql=$db->prepare("SELECT * FROM showing_tbl");
+          $sql=$db->prepare("SELECT * FROM movie_tbl");
           $sql->execute();
           while($row=$sql->fetch(PDO::FETCH_ASSOC)){
             extract($row);
 
             ?>
 
-            <div class="col-sm-4" align="center">
+            <div class="col-sm-3" align="center">
 
               <form method="post" action="manage_cart.php">
               <img src="admin/images/<?php echo $poster; ?>" width="200" height="300" style="border-radius: 50px; border: 2px solid black;"><br><br>
@@ -196,7 +178,7 @@
               <a href="<?php echo $trailer_link; ?>" target="_blank" class="btn btn-info">Watch Trailer</a>
               <!-- <button type="submit" class="btn btn-info" name="buy">View Details</button> -->
               <a href="viewdetails.php" class="btn btn-info">View Details</a> <br>
-              <br><br> <bR>
+              <br><br><br>
             </form>
             </div>
           <?php } ?>
