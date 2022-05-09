@@ -158,29 +158,24 @@
           </div>
         </center>
           <?php 
-          $sql=$db->prepare("SELECT * FROM movie_tbl");
+          $sql=$db->prepare("SELECT * FROM movie_tbl WHERE status='upcoming'");
           $sql->execute();
           while($row=$sql->fetch(PDO::FETCH_ASSOC)){
             extract($row);
 
             ?>
 
-            <div class="col-sm-3" align="center">
+<div class="col-sm-3" align="center">
 
-              <form method="post" action="manage_cart.php">
-              <img src="admin/images/<?php echo $poster; ?>" width="200" height="300" style="border-radius: 50px; border: 2px solid black;"><br><br>
-              <h4><?php echo $title; ?></h4><br>
-              <!-- Description : <?php //echo $description; ?> <br>    
-              Cast : <?php //echo $cast; ?> <br>   
-              Trailer Link: <a href="<?php //echo $trailer_link; ?>" target="_blank">Watch Trailer</a> <br>      
-              <input type="hidden" name="name" value="<?php //echo $productname; ?>">
-              <input type="hidden" name="price" value="<?php //echo $price; ?>"> -->
-              <a href="<?php echo $trailer_link; ?>" target="_blank" class="btn btn-info">Watch Trailer</a>
-              <!-- <button type="submit" class="btn btn-info" name="buy">View Details</button> -->
-              <a href="viewdetails.php" class="btn btn-info">View Details</a> <br>
-              <br><br><br>
-            </form>
-            </div>
+<form method="post" action="viewdetails2.php">
+<img src="admin/images/<?php echo $poster; ?>" width="200" height="300" style="border-radius: 50px; border: 2px solid black;"><br>
+<h4><?php echo $title; ?></h4>
+<a href="<?php echo $trailer_link; ?>" target="_blank" class="btn btn-info">Watch Trailer</a>
+<input type="hidden" name="name" value="<?php echo $title;?>">
+<button class="btn btn-info" name="submit">View Details</button>
+<br><br> <br>
+</form>
+</div>
           <?php } ?>
         </div>
 

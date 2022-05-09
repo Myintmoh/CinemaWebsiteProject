@@ -1,7 +1,7 @@
 <?php 
     // include 'adminheader.php';
     include 'connectionpdo.php';
-    $sql = $db->prepare("SELECT * FROM showing_tbl");
+    $sql = $db->prepare("SELECT * FROM movie_tbl");
     $sql->execute();
 ?>
 <div class="container">
@@ -57,7 +57,7 @@
 
                 try {
                     include 'connectionpdo.php';
-                    $sql="INSERT INTO showing_tbl(title, poster, date, description, cast, duration, trailer_link, status) VALUES(?,?,?,?,?,?,?,?)";
+                    $sql="INSERT INTO movie_tbl(title, poster, release_date, description, cast, duration, trailer_link, status) VALUES(?,?,?,?,?,?,?,?)";
                     $sq= $db->prepare($sql);
                     $title= $_POST['title'];
                     $description= $_POST['description'];
