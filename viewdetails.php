@@ -16,23 +16,21 @@
     <title>Detail Description</title>
 </head>
 <body>
-
 <div class="row" style="margin-top: 100px;">
-        <center>
+    <center>
         <div class="heading_container heading_center" style="border-radius: 10px;width: 58%; margin-bottom: 30px; background-color: #0AA1DD;">
             <h3 style="margin-bottom: -10px;margin-top: 10px; color: white;"><?php echo $_POST['name'];?></h3> <br>
         </div>
-        </center>
-        <?php 
-            $name=$_POST['name'];
-            $sql=$db->prepare("SELECT * FROM movie_tbl WHERE title='$name'");
-            $sql->execute();
-            while($row=$sql->fetch(PDO::FETCH_ASSOC)){
-                extract($row);
+    </center>
+    <?php 
+        $name=$_POST['name'];
+        $sql=$db->prepare("SELECT * FROM movie_tbl WHERE title='$name'");
+        $sql->execute();
+        while($row=$sql->fetch(PDO::FETCH_ASSOC)){
+            extract($row);
             ?>
-
             <div align="center">
-                <form method="post" action="manage_cart.php">
+                <form method="post" action="">
                     <table>
                         <tr>
                             <td rowspan="5"><img src="admin/images/<?php echo $poster; ?>" width="200" height="300" style="border-radius: 10px; border: 2px solid black;"><br></td>
@@ -49,6 +47,10 @@
                         </tr>
                         <tr>
                             <td width="5%"></td>
+                            <td style="text-align: justify;"><font size="3"><b>Release Date : </b></font><?php echo $release_date; ?></td>
+                        </tr>
+                        <tr>
+                            <td width="5%"></td>
                             <td><a href="<?php echo $trailer_link; ?>" target="_blank" class="btn btn-danger">Watch Trailer</a></td>
                         </tr>
                         <tr>
@@ -56,16 +58,12 @@
                             <td height="50"></td>
                         </tr>
                     </table>
-                    <!-- <img src="admin/images/<?php //echo $poster; ?>" width="200" height="300" style="border-radius: 50px; border: 2px solid black;"><br> -->
-                    <!-- <h4><?php //echo $title; ?></h4>   -->
-                    <!-- Cast : <?php //echo $cast; ?> <br>    -->
-                    <!-- Trailer Link: <a href="<?php //echo $trailer_link; ?>" target="_blank">Watch Trailer</a> -->
-              <br><br> <bR>
-            </form>
+                    <br><br> <bR>
+                </form>
             </div>
-          <?php } ?>
-        </div>
-    
-    <?php include 'footer.php'; ?>
+    <?php } ?>
+</div>
+<!-- <div style="margin-bottom: ;"></div> -->
+<?php include 'footer.php'; ?>
 </body>
 </html>

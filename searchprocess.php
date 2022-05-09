@@ -22,7 +22,7 @@
         </div>
         <?php 
             $search=$_POST['search'];
-            $sql=$db->prepare("SELECT * FROM movie_tbl WHERE title='$search'");
+            $sql=$db->prepare("SELECT * FROM movie_tbl WHERE title='$search' AND status='showing'");
             $sql->execute();
             while($row=$sql->fetch(PDO::FETCH_ASSOC)){
                 extract($row);
@@ -38,8 +38,27 @@
                 </form>
             </div>
         <?php } ?>
+
+        <?php 
+            $search=$_POST['search'];
+            $sql=$db->prepare("SELECT * FROM movie_tbl WHERE title='$search' AND status='upcoming'");
+            $sql->execute();
+            while($row=$sql->fetch(PDO::FETCH_ASSOC)){
+                extract($row);
+            ?>
+            <div class="col-sm-4" align="center">
+                <form method="post" action="viewdetails2.php">
+                    <img src="admin/images/<?php echo $poster; ?>" width="200" height="300" style="border-radius: 50px; border: 2px solid black;"><br>
+                    <h4><?php echo $title; ?></h4>
+                    <a href="<?php echo $trailer_link; ?>" target="_blank" class="btn btn-info">Watch Trailer</a>
+                    <input type="hidden" name="name" value="<?php echo $title;?>">
+                    <button class="btn btn-info" name="submit">View Details</button>
+                    <br><br> <bR>
+                </form>
+            </div>
+        <?php } ?>
     </div>
-    <div style="margin-top: -140px;"></div>
+    <div style="margin-top: -139px;"></div>
 </body>
 <?php include 'footer.php'; ?>
 </html>
