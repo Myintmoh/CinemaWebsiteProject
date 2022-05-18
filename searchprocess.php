@@ -22,7 +22,7 @@
         </div>
         <?php 
             $search=$_POST['search'];
-            $sql=$db->prepare("SELECT * FROM movie_tbl WHERE title='$search' AND status='showing'");
+            $sql=$db->prepare("SELECT * FROM movie_tbl WHERE status='showing' AND title LIKE '%$search%'");
             $sql->execute();
             while($row=$sql->fetch(PDO::FETCH_ASSOC)){
                 extract($row);
@@ -41,7 +41,7 @@
 
         <?php 
             $search=$_POST['search'];
-            $sql=$db->prepare("SELECT * FROM movie_tbl WHERE title='$search' AND status='upcoming'");
+            $sql=$db->prepare("SELECT * FROM movie_tbl WHERE status='upcoming' AND title LIKE '%$search%'");
             $sql->execute();
             while($row=$sql->fetch(PDO::FETCH_ASSOC)){
                 extract($row);

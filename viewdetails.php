@@ -7,12 +7,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>Detail Description</title>
 </head>
 <body>
@@ -29,13 +23,13 @@
         while($row=$sql->fetch(PDO::FETCH_ASSOC)){
             extract($row);
             ?>
-            <div align="center">
+            <div align="left" style="margin-left: 50px; margin-top: 50px;">
                 <form method="post" action="">
                     <table>
                         <tr>
                             <td rowspan="5"><img src="admin/images/<?php echo $poster; ?>" width="200" height="300" style="border-radius: 10px; border: 2px solid black;"><br></td>
                             <td width="5%"></td>
-                            <td width="350"><font size="3"><b>Cast : </b></font><?php echo $cast; ?> <br>  </td>
+                            <td width="300"><font size="3"><b>Cast : </b></font><?php echo $cast; ?> <br>  </td>
                         </tr>
                         <tr>
                             <td width="5%"></td>
@@ -47,23 +41,77 @@
                         </tr>
                         <tr>
                             <td width="5%"></td>
-                            <td style="text-align: justify;"><font size="3"><b>Release Date : </b></font><?php echo $release_date; ?></td>
+                            <td style="text-align: justify;"></td>
                         </tr>
                         <tr>
                             <td width="5%"></td>
                             <td><a href="<?php echo $trailer_link; ?>" target="_blank" class="btn btn-danger">Watch Trailer</a></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td height="50"></td>
                         </tr>
                     </table>
                     <br><br> <bR>
                 </form>
             </div>
     <?php } ?>
+    
+    <!-- booking table -->
+    <div align="center" style="margin-top: -380px; margin-right: -555px;">
+        <form method="post" action="bookingprocess.php">
+            <input type="hidden" value="<?php echo $title ?>" name="movie_name">
+            <table class="table table-hover table-bordered text-center" style="width: 600px;">
+                <tr>
+                    <td width="300"><font size="3" class="col-md-12 text-center" style="padding-top: 15px; padding-bottom: 10px;"><b><center>Date</center></b></font></td>
+                    <td width="350">
+                        <div class="col-md-12 text-center" style="padding-top: 10px; padding-bottom: 10px;">
+                            <select class="btn btn-default" name="date">
+                                <option value="<?php echo date('d-m-Y');?>"><?php echo date('d-m-Y');?></option>
+                                <option value="<?php echo date('d-m-Y', strtotime("+1 days"));?>"><?php echo date('d-m-Y', strtotime("+1 days"));?></option>
+                                <option value="<?php echo date('d-m-Y', strtotime("+2 days"));?>"><?php echo date('d-m-Y', strtotime("+2 days"));?></option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="300"><font size="3" class="col-md-12 text-center" style="padding-top: 15px; padding-bottom: 10px;"><b><center>Time</center></b></font></td>
+                    <td width="350">
+                        <div class="col-md-12 text-center" style="padding-top: 10px; padding-bottom: 10px;">
+                            <select class="btn btn-default" name="time">
+                                <option value="11:15 AM">11:15 AM</option>
+                                <option value="3:00 PM">3:00 PM</option>
+                                <option value="7:00 PM">7:00 PM</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="300"><font size="3" class="col-md-12 text-center" style="padding-top: 15px; padding-bottom: 10px;"><b><center>Amount Per Seat</center></b></font></td>
+                    <td width="350">
+                        <div class="col-md-12 text-center" style="padding-top: 15px; padding-bottom: 15px;">
+                            <?php echo $seat_prize;?> MMK
+                        </div>
+                    </td>
+                </tr> 
+                <tr>
+                    <td width="300"><font size="3" class="col-md-12 text-center" style="padding-top: 15px; padding-bottom: 10px;"><b><center>Number of Seats</center></b></font></td>
+                    <td width="350">
+                        <div class="col-md-12 text-center" style="padding-top: 10px; padding-bottom: 10px;">
+                            <input type="number" required tile="Number of Seats" max="5" min="0" name="seats" class="form-control" value="1" style="text-align: center;">
+                            <input type="hidden" value="<?php echo $seat_prize;?>" name="seat_prize">    
+                        </div>
+                    </td>
+                </tr>   
+                <tr>
+                    <td width="350" colspan="2">
+                        <div class="col-md-12 text-center" style="padding-top: 10px; padding-bottom: 10px;">
+                            <button class="btn btn-info" style="width: 600px;">Book Now</button> 
+                        </div>
+                    </td>
+                </tr>  
+            </table>
+            <br><br> <bR>
+        </form>
+    </div>
 </div>
-<!-- <div style="margin-bottom: ;"></div> -->
+<div style="margin-top: -350px;"></div>
 <?php include 'footer.php'; ?>
 </body>
 </html>
