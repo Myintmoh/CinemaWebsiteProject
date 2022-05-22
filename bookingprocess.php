@@ -57,9 +57,14 @@
                     <td width="350"><input style="padding-top: 10px; padding-bottom: 10px; width: 100%;" type="text" name="cus_phone" placeholder="Enter Your Phone Number" required></td>
                 </tr>
                 <tr>
-                    <td width="350" colspan="2">
+                    <td width="300">
                         <div class="col-md-12 text-center" style="padding-top: 10px; padding-bottom: 10px;">
-                            <button class="btn btn-info" style="width: 600px;">Booking Confirm</button> 
+                            <a href="homepage.php" class="btn btn-danger" style="width: 300px;">Cancel</a>
+                        </div>
+                    </td>
+                    <td width="350">
+                        <div class="col-md-12 text-center" style="padding-top: 10px; padding-bottom: 10px;">
+                            <button class="btn btn-info" style="width: 350px;" name="confirm">Booking Confirm</button> 
                         </div>
                     </td>
                 </tr>  

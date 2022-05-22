@@ -66,6 +66,10 @@
                                 <option value="<?php echo date('d-m-Y');?>"><?php echo date('d-m-Y');?></option>
                                 <option value="<?php echo date('d-m-Y', strtotime("+1 days"));?>"><?php echo date('d-m-Y', strtotime("+1 days"));?></option>
                                 <option value="<?php echo date('d-m-Y', strtotime("+2 days"));?>"><?php echo date('d-m-Y', strtotime("+2 days"));?></option>
+                                <option value="<?php echo date('d-m-Y', strtotime("+3 days"));?>"><?php echo date('d-m-Y', strtotime("+3 days"));?></option>
+                                <option value="<?php echo date('d-m-Y', strtotime("+4 days"));?>"><?php echo date('d-m-Y', strtotime("+4 days"));?></option>
+                                <option value="<?php echo date('d-m-Y', strtotime("+5 days"));?>"><?php echo date('d-m-Y', strtotime("+5 days"));?></option>
+                                <option value="<?php echo date('d-m-Y', strtotime("+6 days"));?>"><?php echo date('d-m-Y', strtotime("+6 days"));?></option>
                             </select>
                         </div>
                     </td>
