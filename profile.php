@@ -19,7 +19,7 @@ if(!isset($_SESSION['user']))
                     </center>
 						<?php include('msgbox.php');?>
 						<?php
-				$bk=mysqli_query($con,"select * from booking_tbl where customer_name='".$user['name']."' and status='confirmed' or 'pending'");
+				$bk=mysqli_query($con,"select * from booking_tbl where date>=CURDATE() and customer_name='".$user['name']."' and status='confirmed' or 'pending'");
 				if(mysqli_num_rows($bk))
 				{
 					?>
