@@ -33,7 +33,7 @@
           <a class="nav-link" href="adminmovies.php">MOVIES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="adminbooking.php">BOOKINGS</a>
+            <a class="nav-link" href="adminbookings.php">BOOKINGS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="admincomments.php">COMMENTS</a>

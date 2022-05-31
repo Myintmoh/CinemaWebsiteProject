@@ -13,8 +13,8 @@
 </head>
 <body>
 	<div class="body">
-    <h1>Product Update</h1>
-    <p>Please fill in this form to update the products</p>
+    <h1>Movies Update</h1>
+    <p>Please fill in this form to update the movie information</p>
     <?php 
         include 'connectionpdo.php';
         $eid = $_GET['eid']; 
@@ -23,7 +23,7 @@
         $row=$sql->fetch(PDO::FETCH_ASSOC);
         extract($row);
     ?>
-    <form action="editprocess.php" method="POST" enctype="multipart/form-data">
+    <form action="editmovieprocess.php" method="POST" enctype="multipart/form-data">
 	    <input type="hidden" name="id" value="<?php echo $movie_id;?>">
         <label for="name"><b>Movie Title</b></label>
         <input type="text" name="name" value="<?php echo $title;?>">
@@ -46,7 +46,7 @@
 	    <input type="file" name="newimg"> <br>
 	    <input type="hidden" name="oldimg" value="<?php echo $poster;?>">
         <button type="submit" class="signupbtn" name="submit">Update</button>
-        <a href="adminproducts.php"><button type="button" class="cancelbtn">Cancel</button></a>
+        <a href="adminmovies.php"><button type="button" class="cancelbtn">Cancel</button></a>
     </form>
 
 </body>

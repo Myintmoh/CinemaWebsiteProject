@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('connectionmysqli.php');
+    include('admin/connectionmysqli.php');
     extract($_POST);
     mysqli_query($con,"insert into  user_tbl values(NULL, '$name','$email','$phone','$age','$gender', '$password')");
     $id=mysqli_insert_id($con);

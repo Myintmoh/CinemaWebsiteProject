@@ -33,7 +33,7 @@
 						<tr>
                             <th scope="col">Poster</th>
 							<th scope="col">Title</th>
-							<th scope="col">Release Date</th>
+							<!-- <th scope="col">Release Date</th> -->
 							<th scope="col">Description</th>
 							<th scope="col">Cast</th>
                             <th scope="col">Duration</th>
@@ -51,8 +51,8 @@
 	                    ?>
 	                    <tr>
                             <td><img src="images/<?php echo $poster ?>" width="100" height="150"></td>
-		                    <td><?php echo $title; ?><br><a href="<?php echo $trailer_link?>" target="_blank">Trailer Link</a></td>
-		                    <td><?php echo $release_date; ?></td>
+		                    <td><?php echo $title; ?><br>(<?php echo $release_date;?>)<br><a href="<?php echo $trailer_link?>" target="_blank">Trailer Link</a></td>
+		                    <!-- <td><?php //echo $release_date; ?></td> -->
 		                    <td><?php echo $description; ?></td>
                             <td><?php echo $cast; ?></td>
                             <td><?php echo $duration; ?></td>
