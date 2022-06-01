@@ -19,13 +19,12 @@ if(!isset($_SESSION['user']))
                     </center>
 						<?php include('msgbox.php');?>
 						<?php
-				$bk=mysqli_query($con,"select * from booking_tbl where date>=CURDATE() and customer_name='".$user['name']."' and status='confirmed' or 'pending'");
+				$bk=mysqli_query($con,"select * from booking_tbl where STR_TO_DATE(date,'%d-%m-%Y')>=CURDATE() and customer_name='".$user['name']."' and status in ('confirmed','pending')");
 				if(mysqli_num_rows($bk))
 				{
 					?>
 					<table class="table table-bordered">
 						<thead>
-						<th>Booking Id</th>
 						<th>Movie</th>
 						<th>Customer Name</th>
 						<th>Date</th>
@@ -37,30 +36,27 @@ if(!isset($_SESSION['user']))
 						<?php
 						while($bkg=mysqli_fetch_array($bk))
 						{
-							$m=mysqli_query($con,"SELECT * FROM booking_tbl WHERE customer_name='".$user['name']."'");
-							$mov=mysqli_fetch_array($m);
+							// $m=mysqli_query($con,"SELECT * FROM booking_tbl WHERE customer_name='".$user['name']."'");
+							// $mov=mysqli_fetch_array($m);
 							?>
 							<tr>
 								<td>
-									<?php echo $mov['booking_id'];?>
+									<?php echo $bkg['movie_name'];?>
 								</td>
 								<td>
-									<?php echo $mov['movie_name'];?>
+									<?php echo $bkg['customer_name'];?>
 								</td>
 								<td>
-									<?php echo $mov['customer_name'];?>
+									<?php echo $bkg['date'];?>
 								</td>
 								<td>
-									<?php echo $mov['date'];?>
+									<?php echo $bkg['time'];?>
 								</td>
 								<td>
-									<?php echo $mov['time'];?>
+									<?php echo $bkg['number_of_seats'];?>
 								</td>
 								<td>
-									<?php echo $mov['number_of_seats'];?>
-								</td>
-								<td>
-									<?php echo $mov['amount'];?> MMK
+									<?php echo $bkg['amount'];?> MMK
 								</td>
 							</tr>
 							<?php
