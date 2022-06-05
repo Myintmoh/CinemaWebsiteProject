@@ -89,24 +89,20 @@
             }
         ?>
         <div class="block" style="margin-top: 20px;">
-	<div class="wrap">
-		
-        <form action="searchprocess.php" method="post" onsubmit="myFunction()">
-		       <fieldset>
-		       	<div class="field" >
-		       	
-		       		     
-                                <!-- <input type="text" placeholder="Enter A Movie Name" style="height:32px;width:300px; margin-left: 50px; border-radius: 0px;"  required id="search111" name="search">
-                                <input type="submit" value="Search" style="height:32px; margin-left: -4px; margin-bottom: 2px; border-radius: 0px;" class="btn btn-info"> -->
-                                <input type="text" placeholder="Enter A Movie Name" style="height:31px;width:300px; margin-left: 30px;" name="search">
-                                <input type="submit" value="Search" style="height:32px; margin-left: -5px;">
-    </div>       	
-
-		       </fieldset>
+	        <div class="wrap">		
+            <form action="searchprocess.php" method="post" onsubmit="myFunction()">
+		          <fieldset>
+		       	    <div class="field" >
+                  <!-- <input type="text" placeholder="Enter A Movie Name" style="height:32px;width:300px; margin-left: 50px; border-radius: 0px;"  required id="search111" name="search">
+                  <input type="submit" value="Search" style="height:32px; margin-left: -4px; margin-bottom: 2px; border-radius: 0px;" class="btn btn-info"> -->
+                  <input type="text" placeholder="Enter A Movie Name" style="height:31px;width:300px; margin-left: 30px;" name="search">
+                  <input type="submit" value="Search" style="height:32px; margin-left: -5px;">
+                </div>       	
+		          </fieldset>
             </form>
             <div class="clear"></div>
-   </div>
-</div>
+          </div>
+        </div>
 <script>
 function myFunction() {
      if($('#hero-demo').val()=="")
