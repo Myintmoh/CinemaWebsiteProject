@@ -29,7 +29,7 @@
 			<!-- table -->
 			<div class="col-lg-12">
 				<table class="table">
-					<thead class="text-center">
+					<thead class="text-center thead-dark">
 						<tr>
                             <th scope="col">Customer Name</th>
 							<th scope="col">Email and Phone</th>

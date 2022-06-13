@@ -29,7 +29,7 @@
 			<!-- table -->
 			<div class="col-lg-12">
 				<table class="table">
-					<thead class="text-center">
+					<thead class="text-center thead-dark">
 						<tr>
                             <th scope="col">Name</th>
 							<th scope="col">Email</th>
@@ -45,7 +45,7 @@
 	                    ?>
 	                    <tr>
 		                    <td><?php echo $name; ?></td>
-		                    <td><?php echo $email; ?></td>
+		                    <td><a href="mailto: <?php echo $email; ?>"><?php echo $email; ?></a></td>
                             <td><?php echo $phone; ?></td>
                             <td><?php echo $comment; ?></td>
 		                    <td><a href="deletecomments.php?did=<?php echo $comment_id;?>"><button type="submit" class="cancelbtn" style="width: 100px; height: 52px; border-radius: 15px;">DELETE</button></a></td>

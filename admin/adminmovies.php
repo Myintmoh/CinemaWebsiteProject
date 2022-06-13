@@ -29,7 +29,7 @@
 			<!-- table -->
 			<div class="col-lg-12">
 				<table class="table">
-					<thead class="text-center">
+					<thead class="text-center thead-dark">
 						<tr>
                             <th scope="col">Poster</th>
 							<th scope="col">Title</th>
@@ -38,7 +38,7 @@
 							<th scope="col">Cast</th>
                             <th scope="col">Duration</th>
                             <!-- <th scope="col">Trailer Link</th> -->
-                            <th scope="col">Seat Prize</th>
+                            <th scope="col">Seat Price</th>
                             <th scope="col">Status</th>
                             <th scope="col">Update</th> 
 							<th scope="col">Delete</th>
@@ -86,7 +86,7 @@
                 <input type="text" placeholder="Enter Movie Trailer Link" name="link" required>
                 <label for="status"><b>Status</b></label>
                 <input type="text" placeholder="Enter Status" name="status" required>
-                <label for="seatprize"><b>Seat Prize</b></label>
+                <label for="seatprize"><b>Seat Price</b></label>
                 <input type="text" placeholder="Enter Seat Prize" name="seatprize" required>
                 <label for="date"><b>Release Date</b></label> <br>
                 <input type="date" name="date" required> <br> <br>
