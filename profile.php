@@ -31,6 +31,7 @@ if(!isset($_SESSION['user']))
 						<th>Time</th>
 						<th>Seats</th>
 						<th>Amount</th>
+						<th>Delete</th>
 						</thead>
 						<tbody>
 						<?php
@@ -57,6 +58,9 @@ if(!isset($_SESSION['user']))
 								</td>
 								<td>
 									<?php echo $bkg['amount'];?> MMK
+								</td>
+								<td>
+									<a href="deletebookings.php?did=<?php echo $bkg['booking_id'];?>"><button type="submit" class="cancelbtn">DELETE</button></a>
 								</td>
 							</tr>
 							<?php
